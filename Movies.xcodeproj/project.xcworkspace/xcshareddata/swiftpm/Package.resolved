@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "BottomSheet-SwiftUI",
+        "repositoryURL": "https://github.com/shirokova/bottomsheet-swiftui.git",
+        "state": {
+          "branch": null,
+          "revision": "fe87e92c734e515037be3204f836fbff33769e96",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
