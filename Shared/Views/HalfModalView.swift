@@ -37,12 +37,7 @@ struct HalfModalView<Content: View> : View {
                     .frame(width: UIScreen.main.bounds.size.width, height: 1100)
                     .background(isShown ? Color.black.opacity( 0.5 * fraction_progress(lowerLimit: 0, upperLimit: Double(modalHeight), current: Double(dragState.translation.height), inverted: true)) : Color.clear)
                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-                    .gesture(
-                        TapGesture()
-                            .onEnded { _ in
-                                self.isShown = false
-                            }
-                    )
+                    .gesture(drag)
                 
                 //Foreground
                 VStack{
@@ -50,7 +45,7 @@ struct HalfModalView<Content: View> : View {
                     ZStack{
                         Color.white.opacity(1.0)
                             .frame(width: UIScreen.main.bounds.size.width, height:modalHeight)
-                            .cornerRadius(10)
+                            .cornerRadius(30)
                             .shadow(radius: 5)
                         self.content()
                             .padding()
