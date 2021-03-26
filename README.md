@@ -25,7 +25,7 @@ var body: some View {
 ```
 
 - Use HalfModalView
-```
+```Swift
 struct modalView: View {
     @State private var showModal = false
     
